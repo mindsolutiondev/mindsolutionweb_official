@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,10 +28,11 @@ footer, header, hgroup, menu, nav, section {
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Kanit', sans-serif;
+
 }
 body {
     line-height: 1;
-    font-family: 'Mitr', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -152,8 +153,8 @@ nav ul.menu li a:hover {
 }
  
 .service_items_container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     width: 100%;
     padding-top: 4em;
 }
@@ -209,11 +210,11 @@ nav ul.menu li a:hover {
 
 .ourteam {
     width: 100%;
-    height: 781px;
+    height: 481px;
 }
 
 .ourteam_header {
-    padding-top: 2em;
+    padding-top: 3em;
     text-align: center;
     font-size: 3em;
     position: relative;
@@ -229,6 +230,12 @@ nav ul.menu li a:hover {
     bottom: -20px;
 }
 
+.ourteam_items {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* Contact Us */
@@ -242,10 +249,196 @@ nav ul.menu li a:hover {
     white-space: normal;
 }
 
+.contactus_header {
+    padding-top: 10em;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+    color: white;
+}
+
+.contactus_header p:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    border-bottom: 3px solid white;
+    bottom: -20px;
+}
+
+address {
+    width: 100%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+    color: white;
+}
+
+.contactus_container {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.contactus_items {
+    color: white;
+}
+.contactus_items .contactus_item_pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.contactus_item_content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactus_item_content span {
+    font-weight: bold;
+}
+
+.copyright {
+    width: 100%;
+    margin-top: 6em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
 /* typewrite */
 
 .typewrite {
     color: white;
     text-align: center !important;
     font-size: 2em;
+}
+
+/* responsive */
+
+
+@media only screen and (max-width: 768px) {
+    .header_title {
+        width: auto;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .logo {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .typewrite {
+        font-size: 1em;
+    }
+    .services {
+        height: 542px;
+    }
+    .services_items {
+        margin-bottom: 29px;
+    }
+
+    .copyright {
+        margin-top: 0em;
+        padding: 2em 2px;
+        margin-bottom: 0.01em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    nav ul.menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .header_title {
+        width: 378px;
+    }
+    .typewrite {
+        font-size: 1em;
+    }
+
+    .getstarted {
+        margin-top: -81px;
+        margin-left: -5px;
+    }
+    .services {
+        margin-top: -250px;
+    }
+    header {
+        clip-path: polygon(0 61%, 0 0, 100% 0, 122% 58%, 50% 74%);
+    }
+
+    .contactus_container {
+        flex-direction: column;
+        padding-top: 0vh;
+    }
+    .contactus_header {
+        padding-top: 4em;
+    }
+    .services_header h4 {
+        text-align: center;
+        font-size: 2em;
+        position: relative;
+    }
+
+    .services_item_headers {
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        font-size: large;
+    }
+
+    .services_item_content {
+        font-size: smaller;
+    }
+
+    .contactus {
+        height: auto;
+        clip-path: polygon(100% 100%, 47% 100%, 0 100%, 0 0, 50% 12%, 100% 0);
+    }
+
+    address {
+        word-break: break-word;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .typewrite {
+        font-size: 0.7em;
+    }
+
+    .header_title .text {
+        margin-right: 20px;
+    }
+
+    
+    .services_item_headers {
+        margin-top: 1em;
+        margin-bottom: 0.6em;
+        font-size: large;
+    }
+
+    .services_item_content {
+        font-size: smaller;
+    }
+
+    .service_items_container {
+        width: 98%;
+        padding-top: 4em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ourteam_items img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contactus {
+        height: auto;
+    }
+
 }
