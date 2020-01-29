@@ -22,12 +22,19 @@
   </head>
 
   <body id="fullpage">
-
+    <div class="loader hidden">
+      <img src="./img/preloading.gif" alt="Preloading">
+    </div>
     <header class="section">
       <div class="container">
         <nav>
           <div class="logo">
             <img src="./img/Arrow.png" width="100px" />
+          </div>
+          <div class="menu-tab">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
           <ul class="menu">
             <li><a href="#section1">บริการของเรา</a></li>
@@ -41,7 +48,7 @@
             <h1
               class="typewrite"
               data-period="2000"
-              data-type='[ "Hi, I am Mind Solution", "I am Creative.", "I Love Design.", "I Love to Develop." ]'
+              data-type='[ "Hi, I am MindSolution", "I am Creative.", "I Love Design.", "I Love to Develop." ]'
             >
               <span class="wrap"> </span>
             </h1>
@@ -172,6 +179,7 @@
       </div>
     </section>
 
+    <script src="./js/preload.js"></script>
     <script src="./js/typewrite.js"></script>
     <script src="https://cdnjs.com/libraries/fullPage.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
