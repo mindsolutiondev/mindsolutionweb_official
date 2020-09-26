@@ -1,1 +1,1 @@
-/zheza-staging* http://app-rs-zheza.web.staging.kube.internal.mindsolution.tech 200
+/oms/api/system/health* http://api.sendit.asia/oms/api/v1/system/health 200
